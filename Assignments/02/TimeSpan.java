@@ -69,7 +69,7 @@ public class TimeSpan implements Comparable<TimeSpan>{
 	
 	@Override
 	public int compareTo(TimeSpan other) {
-		return Integer.compare(this.toString().length(), other.toString().length());
+		return Integer.compare((this.getHours() * 60) + this.getMinutes(), (other.getHours() * 60) + other.getMinutes());
 	}
 	
 	public TimeSpan plus(TimeSpan other) {
